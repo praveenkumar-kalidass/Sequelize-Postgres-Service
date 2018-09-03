@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "SET NODE_ENV=development && nodemon app.js",
-    "prod": "SET NODE_ENV=production && node app.js"
+    "prod": "SET NODE_ENV=production && node app.js",
+    "migrate": "sequelize db:migrate",
+    "migrate-development": "SET NODE_ENV=development && sequelize db:migrate"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -14,6 +16,7 @@
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
+    "mysql2": "^1.6.1",
     "sequelize": "^4.38.0",
     "sequelize-cli": "^4.1.1"
   },

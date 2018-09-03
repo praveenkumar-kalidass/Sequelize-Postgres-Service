@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "employees_sequelize",
+    "database": "sequelize_employee_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "pool": {
