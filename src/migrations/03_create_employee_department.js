@@ -39,6 +39,16 @@ module.exports = {
         type: Sequelize.DATEONLY,
         allowNull: false,
         field: 'to_date'
+      },
+      createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        field: 'created_at'
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        field: 'updated_at'
       }
     });
   },
