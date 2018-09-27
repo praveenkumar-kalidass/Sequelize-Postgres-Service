@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon app.js",
-    "dev": "SET NODE_ENV=development && nodemon app.js",
     "prod": "SET NODE_ENV=production && node app.js",
     "migrate": "sequelize db:migrate",
-    "migrate-development": "SET NODE_ENV=development && sequelize db:migrate"
+    "seed": "sequelize db:seed:all"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
