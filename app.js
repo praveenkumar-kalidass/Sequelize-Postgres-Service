@@ -7,6 +7,7 @@ const http = require('http');
 const debug = require('debug')('sequelize-mysql-service:server');
 
 const clientRouter = require('./routes/index');
+const serverRouter = require('./src/controller');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', clientRouter);
+app.use('/api', serverRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

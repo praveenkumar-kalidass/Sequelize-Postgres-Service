@@ -4,16 +4,24 @@
 module.exports = (sequelize, DataTypes) => {
     const Department = sequelize.define('Department', {
       deptNo: {
-        type: Sequelize.STRING(4),
+        type: DataTypes.STRING(4),
         allowNull: false,
         field: 'dept_no',
         primaryKey: true
       },
       deptName: {
-        type: Sequelize.STRING(40),
+        type: DataTypes.STRING(40),
         allowNull: false,
         field: 'dept_name',
         unique: true
+      },
+      createdAt: {
+        type: DataTypes.DATE,
+        field: 'created_at'
+      },
+      updatedAt: {
+        type: DataTypes.DATE,
+        field: 'updated_at'
       }
     }, {
         freezeTableName: true,
