@@ -4,7 +4,7 @@ const employees = require('../storage/employee');
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('seq_employee',
-      employees.slice(0, 1000),
+      employees,
       {}
     );
   },

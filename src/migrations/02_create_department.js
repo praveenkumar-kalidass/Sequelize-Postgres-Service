@@ -2,17 +2,11 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('seq_department', {
-      id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-        allowNull: false
-      },
       deptNo: {
         type: Sequelize.STRING(4),
         allowNull: false,
         field: 'dept_no',
-        unique: true
+        primaryKey: true
       },
       deptName: {
         type: Sequelize.STRING(40),

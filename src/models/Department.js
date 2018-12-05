@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         type: Sequelize.STRING(4),
         allowNull: false,
         field: 'dept_no',
-        unique: true
+        primaryKey: true
       },
       deptName: {
         type: Sequelize.STRING(40),

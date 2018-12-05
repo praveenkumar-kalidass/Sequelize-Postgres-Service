@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER(11),
         allowNull: false,
         field: 'emp_no',
-        unique: true
+        primaryKey: true
       },
       birthDate: {
         type: DataTypes.DATEONLY,

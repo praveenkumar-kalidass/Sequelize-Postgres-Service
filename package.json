@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "start": "nodemon app.js",
-    "prod": "SET NODE_ENV=production && node app.js",
+    "production": "node app.js",
     "migrate": "sequelize db:migrate",
-    "seed": "sequelize db:seed:all"
+    "migrate-undo": "sequelize db:migrate:undo",
+    "seed": "sequelize db:seed:all",
+    "seed-undo": "sequelize db:seed:undo:all"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -14,8 +16,8 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "mysql2": "^1.6.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.7.1",
     "sequelize": "^4.38.0",
     "sequelize-cli": "^4.1.1"
   },

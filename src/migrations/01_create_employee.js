@@ -2,17 +2,11 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('seq_employee', {
-      id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-        allowNull: false
-      },
       empNo: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
         field: 'emp_no',
-        unique: true
+        primaryKey: true
       },
       birthDate: {
         type: Sequelize.DATEONLY,
